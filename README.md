@@ -94,18 +94,7 @@ Ismail Nyzar
 
 ------
 
-To contribute 
-
-1. Fork the Repository
-
-2. Create a branch with your name
-   <sup>Ex</sup>  
-
-   ```
-   ismail-nyzar
-   ```
-
-3. Submit a Pull Request 
+To contribute Please refer to the Contribution docs [here](https://github.com/ismailnyza/vue-chat/blob/main/Contributing-Guidelines.md)
 
 ## License
 
