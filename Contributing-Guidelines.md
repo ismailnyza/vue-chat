@@ -2,20 +2,19 @@
 
 We would love for you to contribute to Angular and help make it even better than it is today! As a contributor, here are the guidelines we would like you to follow:
 
-- [Code of Conduct](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#coc)
-- [Question or Problem?](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#question)
-- [Issues and Bugs](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#issue)
-- [Feature Requests](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#feature)
-- [Submission Guidelines](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#submit)
-- [Coding Rules](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#rules)
-- [Commit Message Guidelines](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit)
-- [Signing the CLA](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#cla)
+- Question or Problem?
+- Issues and Bugs
+- Feature Requests
+- Submission Guidelines
+- Coding Rules
+- Commit Message Guidelines
+- Signing the CLA
 
 
 
 ## Got a Question or Problem?
 
-Do not open issues for general support questions as we want to keep GitHub issues for bug reports and feature requests. Instead, we recommend using [Stack Overflow](https://stackoverflow.com/questions/tagged/angular) to ask support-related questions.
+Do not open issues for general support questions as we want to keep GitHub issues for bug reports and feature requests. Instead, we recommend using Stack Overflow to ask support-related questions.
 
 Stack Overflow is a much better place to ask questions since:
 
@@ -27,19 +26,17 @@ To save your and our time, we will systematically close all issues that are requ
 
 ## Found a Bug?
 
-If you find a bug in the source code, you can help us by [submitting an issue](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#submit-issue) to our [GitHub Repository](https://github.com/angular/angular). Even better, you can [submit a Pull Request](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#submit-pr) with a fix.
+If you find a bug in the source code, you can help us by submitting an issue to our GitHub Repository. Even better, you can submit a Pull Request with a fix.
 
 ## Missing a Feature?
 
-You can *request* a new feature by [submitting an issue](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#submit-issue) to our GitHub Repository. If you would like to *implement* a new feature, please consider the size of the change in order to determine the right steps to proceed:
+You can *request* a new feature by submitting an issue to our GitHub Repository. If you would like to *implement* a new feature, please consider the size of the change in order to determine the right steps to proceed:
 
 - For a **Major Feature**, first open an issue and outline your proposal so that it can be discussed. This process allows us to better coordinate our efforts, prevent duplication of work, and help you to craft the change so that it is successfully accepted into the project.
 
   **Note**: Adding a new topic to the documentation, or significantly re-writing a topic, counts as a major feature.
 
-- **Small Features** can be crafted and directly [submitted as a Pull Request](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#submit-pr).
-
-## Submission Guidelines
+- **Small Features** can be crafted and directly submitted as a Pull Request.
 
 ### Submitting an Issue
 
@@ -59,11 +56,11 @@ You can file new issues by selecting from our [new issue templates](https://gith
 
 Before you submit your Pull Request (PR) consider the following guidelines:
 
-1. Search [GitHub](https://github.com/angular/angular/pulls) for an open or closed PR that relates to your submission. You don't want to duplicate existing efforts.
+1. Search GitHub for an open or closed PR that relates to your submission. You don't want to duplicate existing efforts.
 
 2. Be sure that an issue describes the problem you're fixing, or documents the design for the feature you'd like to add. Discussing the design upfront helps to ensure that we're ready to accept your work.
 
-3. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the angular/angular repo.
+3. [Fork](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo) the repo.
 
 4. In your forked repository, make your changes in a new git branch:
 
@@ -73,7 +70,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
 
 5. Follow our Conventions 
 
-6. Commit your changes using a descriptive commit message that follows our [commit message conventions](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit). Adherence to these conventions is necessary because release notes are automatically generated from these messages.
+6. Commit your changes using a descriptive commit message that follows our commit message conventions. Adherence to these conventions is necessary because release notes are automatically generated from these messages.
 
    ```
    git commit --all
@@ -88,10 +85,6 @@ Before you submit your Pull Request (PR) consider the following guidelines:
    ```
 
 8. In GitHub, send a pull request to `vue-chat:master`.
-
-### Reviewing a Pull Request
-
-The Vue chat team reserves the right not to accept pull requests from community members who haven't been good citizens of the community. Such behavior includes not following the [Angular code of conduct](https://github.com/angular/code-of-conduct) and applies within or outside of Angular managed channels.
 
 #### Addressing review feedback
 
@@ -108,7 +101,7 @@ If we ask for changes via code reviews then:
    git push
    ```
 
-   For more info on working with fixup commits see [here](https://github.com/angular/angular/blob/master/docs/FIXUP_COMMITS.md).
+   
 
 That's it! Thank you for your contribution!
 
@@ -228,43 +221,6 @@ Must be one of the following:
 - **refactor**: A code change that neither fixes a bug nor adds a feature
 - **test**: Adding missing tests or correcting existing tests
 
-##### Scope
-
-The scope should be the name of the npm package affected (as perceived by the person reading the changelog generated from commit messages).
-
-The following is the list of supported scopes:
-
-- `animations`
-- `bazel`
-- `benchpress`
-- `common`
-- `compiler`
-- `compiler-cli`
-- `core`
-- `elements`
-- `forms`
-- `http`
-- `language-service`
-- `localize`
-- `platform-browser`
-- `platform-browser-dynamic`
-- `platform-server`
-- `router`
-- `service-worker`
-- `upgrade`
-- `zone.js`
-
-There are currently a few exceptions to the "use package name" rule:
-
-- `packaging`: used for changes that change the npm package layout in all of our packages, e.g. public path changes, package.json changes done to all packages, d.ts file/format changes, changes to bundles, etc.
-- `changelog`: used for updating the release notes in CHANGELOG.md
-- `dev-infra`: used for dev-infra related changes within the directories /scripts, /tools and /dev-infra
-- `docs-infra`: used for docs-app (angular.io) related changes within the /aio directory of the repo
-- `migrations`: used for changes to the `ng update` migrations.
-- `ngcc`: used for changes to the [Angular Compatibility Compiler](https://github.com/angular/angular/blob/master/packages/compiler-cli/ngcc/README.md)
-- `ve`: used for changes specific to ViewEngine (legacy compiler/renderer).
-- none/empty string: useful for `test` and `refactor` changes that are done across all packages (e.g. `test: add missing unit tests`) and for docs changes that are not related to a specific package (e.g. `docs: fix typo in tutorial`).
-
 ##### Summary
 
 Use the summary field to provide a succinct description of the change:
@@ -287,4 +243,3 @@ The content of the commit message body should contain:
 
 - information about the SHA of the commit being reverted in the following format: `This reverts commit <SHA>`,
 - a clear description of the reason for reverting the commit message.
-
