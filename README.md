@@ -5,7 +5,6 @@ A simple chat application built with vue js
 ## Built With
 
 - Vue js 
-- Bootstrap
 
 ## Getting Started
 
@@ -45,8 +44,7 @@ Essentials to be installed before the project can be run.
    ```
    npm install
    ```
-
-   
+  
 
 3. Locate the root directory of the project 
 
@@ -55,7 +53,6 @@ Essentials to be installed before the project can be run.
    ```
 
    
-
 4.   Serve The project locally 
 
    ```
@@ -113,10 +110,6 @@ To contribute
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
-
-## Acknowledgements
-
-- [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 
 
 
