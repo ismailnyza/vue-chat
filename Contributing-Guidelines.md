@@ -1,6 +1,6 @@
 # Contributing to Vue Chat 
 
-We would love for you to contribute to Angular and help make it even better than it is today! As a contributor, here are the guidelines we would like you to follow:
+We would love for you to contribute to Vue Chat and help make it even better than it is today! As a contributor, here are the guidelines we would like you to follow:
 
 - Question or Problem?
 - Issues and Bugs
@@ -50,7 +50,7 @@ We require a minimal reproduction to save maintainers' time and ultimately be ab
 
 Unfortunately, we are not able to investigate / fix bugs without a minimal reproduction, so if we don't hear back from you, we are going to close an issue that doesn't have enough info to be reproduced.
 
-You can file new issues by selecting from our [new issue templates](https://github.com/angular/angular/issues/new/choose) and filling out the issue template.
+You can file new issues by selecting from our new issue templates and filling out the issue template.
 
 ### Submitting a Pull Request (PR)
 
@@ -92,9 +92,7 @@ If we ask for changes via code reviews then:
 
 1. Make the required updates to the code.
 
-2. Re-run the Angular test suites to ensure tests are still passing.
-
-3. Create a fixup commit and push to your GitHub repository (this will update your Pull Request):
+2. Create a fixup commit and push to your GitHub repository (this will update your Pull Request):
 
    ```
    git commit --all --fixup HEAD
@@ -107,7 +105,7 @@ That's it! Thank you for your contribution!
 
 ##### Updating the commit message
 
-A reviewer might often suggest changes to a commit message (for example, to add more context for a change or adhere to our [commit message guidelines](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit)). In order to update the commit message of the last commit on your branch:
+A reviewer might often suggest changes to a commit message (for example, to add more context for a change or adhere to our commit message guidelines. In order to update the commit message of the last commit on your branch:
 
 1. Check out your branch:
 
@@ -182,12 +180,11 @@ Each commit message consists of a **header**, a **body**, and a **footer**.
 <footer>
 ```
 
-The `header` is mandatory and must conform to the [Commit Message Header](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit-header) format.
+The `header` is mandatory and must conform to the [Commit Message Header format.
 
-The `body` is mandatory for all commits except for those of type "docs". When the body is present it must be at least 20 characters long and must conform to the [Commit Message Body](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit-body) format.
+The `body` is mandatory for all commits except for those of type "docs". When the body is present it must be at least 20 characters long and must conform to the Commit Message Body format.
 
-The `footer` is optional. The [Commit Message Footer](https://github.com/angular/angular/blob/master/CONTRIBUTING.md#commit-footer) format describes what the footer is used for and the structure it must have.
-
+The `footer` is optional.
 Any line of the commit message cannot be longer than 100 characters.
 
 #### Commit Message Header
