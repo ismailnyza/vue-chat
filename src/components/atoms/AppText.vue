@@ -18,9 +18,4 @@ export default defineComponent({
 });
 </script>
 
-<style scoped lang="scss">
-p {
-  font-size: 1.8rem;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-</style>
+<style scoped lang="scss"></style>
