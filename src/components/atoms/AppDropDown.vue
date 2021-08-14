@@ -20,4 +20,16 @@ export default defineComponent({
 });
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+select {
+  border-radius: 0.5rem;
+  padding: 0.5rem 2rem;
+  outline: none;
+  border: none;
+  appearance: none;
+  text-align-last: center;
+  background-color: #bfe7e2;
+  color: #01a38b;
+  font-weight: bold;
+}
+</style>
