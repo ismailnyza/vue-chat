@@ -1,16 +1,18 @@
 <template>
-  <app-avatar :size="'regular'" :isActive="true" :source="profileImage" />
-  <app-text
-    :textType="'header'"
-    :isBold="true"
-    :isShaded="false"
-    :value="userName"
-  />
-  <app-drop-down
-    :options="['Active', 'Offline', 'Busy']"
-    :selectedOption="'Active'"
-    :name="'User Status'"
-  />
+  <div class="profile-container">
+    <app-avatar :size="'regular'" :isActive="true" :source="profileImage" />
+    <app-text
+      :textType="'header'"
+      :isBold="true"
+      :isShaded="false"
+      :value="userName"
+    />
+    <app-drop-down
+      :options="['Active', 'Offline', 'Busy']"
+      :selectedOption="'Active'"
+      :name="'User Status'"
+    />
+  </div>
 </template>
 
 <script lang="ts">
@@ -34,4 +36,11 @@ export default defineComponent({
 });
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.profile-container {
+  display: grid;
+  grid-row-gap: 2px;
+  max-width: 1em;
+  text-align: center;
+}
+</style>
