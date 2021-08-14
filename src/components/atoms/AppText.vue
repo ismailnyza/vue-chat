@@ -3,7 +3,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, PropType } from "vue";
+
+type TextType = "header" | "title" | "subtitle" | "message" | "tiny-text";
 
 export default defineComponent({
   name: "app-text",
@@ -11,7 +13,7 @@ export default defineComponent({
     value: String,
     isBold: Boolean,
     isShaded: Boolean,
-    textType: String, // header, title, subtitle, message, tiny-text
+    textType: String as PropType<TextType>,
   },
 });
 </script>

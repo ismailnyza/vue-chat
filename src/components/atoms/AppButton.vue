@@ -1,16 +1,19 @@
 <template>
-  <button>{{ text }}</button>
+  <button>
+    <slot></slot>
+  </button>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, PropType } from "vue";
+
+type Size = "small" | "regular" | "tiny";
 
 export default defineComponent({
   name: "app-button",
   props: {
-    text: String,
     isColored: Boolean,
-    size: String, // small, regular, tiny
+    size: String as PropType<Size>,
   },
 });
 </script>
