@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="contact-card">
     <app-avatar
       :size="'small'"
       :isActive="isActive"

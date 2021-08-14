@@ -1,5 +1,5 @@
 <template>
-  <img v-bind:src="source" v-bind:alt="altText" />
+  <img :src="source" :alt="altText" />
 </template>
 
 <script lang="ts">

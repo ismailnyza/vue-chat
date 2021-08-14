@@ -40,7 +40,5 @@ export default defineComponent({
 .profile-container {
   display: grid;
   grid-row-gap: 2px;
-  max-width: 1em;
-  text-align: center;
 }
 </style>
