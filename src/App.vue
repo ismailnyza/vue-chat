@@ -23,10 +23,6 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-p {
-  font-size: 1.8rem;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
 .container {
   display: grid;
   grid-template-columns: 33% 33% 33%;
