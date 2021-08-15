@@ -1,11 +1,10 @@
 <template>
-  <div class="home">
-    <profile-view :userName="name" :profileImage="contactImage" />
-    <hr />
-    <contact
-      :contactName="name"
-      :secondaryText="'Last message sent'"
+  <div>
+    <message
       :contactImage="contactImage"
+      :message="message"
+      :isActive="false"
+      :contactName="name"
       :timestamp="timestamp"
     />
   </div>
@@ -13,18 +12,16 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import ProfileView from "@/components/molecules/ProfileView.vue";
-import Contact from "@/components/molecules/Contact.vue";
+import Message from "@/components/molecules/Message.vue";
 
 import { getReadableTime } from "@/helpers/time";
 
 const timestamp = getReadableTime(Date.now());
 
 export default defineComponent({
-  name: "home",
+  name: "conversation-area",
   components: {
-    ProfileView,
-    Contact,
+    Message,
   },
   data: () => {
     return {
