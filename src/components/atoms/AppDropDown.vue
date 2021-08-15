@@ -23,7 +23,7 @@ export default defineComponent({
 <style scoped lang="scss">
 select {
   border-radius: 0.5rem;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 20px;
   outline: none;
   border: none;
   appearance: none;
@@ -31,5 +31,6 @@ select {
   background-color: #bfe7e2;
   color: #01a38b;
   font-weight: bold;
+  width: 40%;
 }
 </style>
