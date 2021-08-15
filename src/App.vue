@@ -23,6 +23,8 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+@import "@/assets/_global.scss";
+
 .container {
   display: grid;
   grid-template-columns: 33% 33% 33%;
