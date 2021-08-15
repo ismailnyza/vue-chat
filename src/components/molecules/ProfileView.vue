@@ -11,6 +11,7 @@
       :options="['Active', 'Offline', 'Busy']"
       :selectedOption="'Active'"
       :name="'User Status'"
+      :id="'dropdown'"
     />
   </div>
 </template>
