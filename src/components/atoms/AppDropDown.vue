@@ -1,5 +1,5 @@
 <template>
-  <select v-bind:name="name" v-bind:id="id">
+  <select v-bind:name="name" v-bind:id="id" :style="css">
     <option v-for="option in options" :key="option" v-bind:value="option">
       {{ option }}
     </option>
@@ -16,6 +16,26 @@ export default defineComponent({
     options: Array as PropType<string[]>,
     name: String,
     id: String,
+  },
+  computed: {
+    cssProps() {
+      // here
+      let backgroundColor = "green";
+      switch (this.selectedOption) {
+        case "Active":
+          backgroundColor = "green";
+          break;
+        case "Offline":
+          backgroundColor = "grey";
+          break;
+        case "Busy":
+          backgroundColor = "#ffffff";
+          break;
+      }
+      return {
+        "--backgroundColour": backgroundColor,
+      };
+    },
   },
 });
 </script>
