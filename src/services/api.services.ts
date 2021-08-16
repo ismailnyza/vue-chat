@@ -6,7 +6,7 @@ interface ServiceTypes {
   contactsService: ContactsService;
 }
 
-export function APIServices(): ServiceTypes {
+export function API(): ServiceTypes {
   return {
     userService: new UserService(),
     contactsService: new ContactsService(),

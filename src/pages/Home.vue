@@ -13,10 +13,10 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import ProfileView from "@/components/molecules/ProfileView.vue";
-import Contact from "@/components/molecules/Contact.vue";
+import ProfileView from "@vue-chat/shared/molecules/ProfileView.vue";
+import Contact from "@vue-chat/shared/molecules/Contact.vue";
 
-import { getReadableTime } from "@/helpers/time";
+import { getReadableTime } from "@vue-chat/helpers";
 
 const timestamp = getReadableTime(Date.now());
 
@@ -32,7 +32,7 @@ export default defineComponent({
       name: "John Doe",
       contactImage:
         "https://raw.githubusercontent.com/Ashwinvalento/cartoon-avatar/master/lib/images/female/68.png",
-      message: "This is a message. This can be long and short",
+      message: "This is a message.",
     };
   },
 });

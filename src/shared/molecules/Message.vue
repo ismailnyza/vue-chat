@@ -35,8 +35,8 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import AppAvatar from "@/components/atoms/AppAvatar.vue";
-import AppText from "@/components/atoms/AppText.vue";
+import AppAvatar from "@vue-chat/shared/atoms/AppAvatar.vue";
+import AppText from "@vue-chat/shared/atoms/AppText.vue";
 
 export default defineComponent({
   name: "message",

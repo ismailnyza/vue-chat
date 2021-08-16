@@ -17,9 +17,9 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
-import AppAvatar from "./../atoms/AppAvatar.vue";
-import AppText from "./../atoms/AppText.vue";
-import AppDropDown from "./../atoms/AppDropDown.vue";
+import AppAvatar from "@vue-chat/shared/atoms/AppAvatar.vue";
+import AppText from "@vue-chat/shared/atoms/AppText.vue";
+import AppDropDown from "@vue-chat/shared/atoms/AppDropDown.vue";
 
 export default defineComponent({
   name: "profile-view",

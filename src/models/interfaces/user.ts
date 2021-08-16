@@ -1,4 +1,4 @@
-import { UserStatus } from "./user-status";
+import { UserStatus } from "../constants";
 
 export interface User {
   userId: string;

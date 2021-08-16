@@ -12,9 +12,9 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Message from "@/components/molecules/Message.vue";
+import Message from "@vue-chat/shared/molecules/Message.vue";
 
-import { getReadableTime } from "@/helpers/time";
+import { getReadableTime } from "@vue-chat/helpers";
 
 const timestamp = getReadableTime(Date.now());
 

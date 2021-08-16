@@ -1,29 +1,20 @@
 <template>
   <div class="container">
-    <home />
-    <conversation-area />
-    <conversation-detalis-area />
+    <h1>Hello world</h1>
   </div>
 </template>
 
 <script>
 import { defineComponent } from "vue";
-import Home from "@/views/Home.vue";
-import ConversationArea from "@/views/ConversationArea.vue";
-import ConversationDetalisArea from "@/views/ConversationDetailsArea.vue";
 
 export default defineComponent({
   name: "App",
-  components: {
-    Home,
-    ConversationArea,
-    ConversationDetalisArea,
-  },
+  components: {},
 });
 </script>
 
 <style lang="scss">
-@import "@/assets/_global.scss";
+@import "src/assets/_global.scss";
 
 .container {
   display: grid;

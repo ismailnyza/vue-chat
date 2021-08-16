@@ -1,8 +1,8 @@
-import { Logger } from "@/utils";
+import { Logger } from "@vue-chat/utils";
 
 const logger = new Logger("interval logger");
 
-// Creates  a delay for given secnods of time
+// Creates a delay for given secnods of time
 export function createInterval(seconds: number): Promise<void> {
   return new Promise((resolve) =>
     setTimeout(() => {
