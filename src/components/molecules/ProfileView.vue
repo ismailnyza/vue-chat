@@ -55,12 +55,12 @@ export default defineComponent({
   padding-left: 10%;
 }
 .profile-img {
-  margin-left: 40%;
+  margin-left: 160px;
 }
 .profile-text {
-  margin-left: 35%;
+  margin-left: 150px;
 }
 .profile-visibility {
-  margin-left: 30%;
+  margin-left: 90px;
 }
 </style>
