@@ -59,11 +59,15 @@ export default class SideMenu extends Vue {
 <style lang="scss">
 .route-list {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .profile-image {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 </style>

@@ -27,7 +27,6 @@ export default defineComponent({
 
 #nav {
   height: 100%;
-  width: 160px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -48,7 +47,7 @@ export default defineComponent({
 }
 
 .main {
-  margin-left: 160px;
+  margin-left: 80px;
   padding: 0px 0px;
   height: 100%;
   border-radius: 10px;
