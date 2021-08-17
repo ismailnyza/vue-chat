@@ -1,13 +1,13 @@
 <template>
   <div class="search-container">
-    <app-input />
+    <app-input placeholder="Search..." />
   </div>
   <div class="contacts-container">
     <div v-for="contact in contacts" :key="contact.contactId">
       <contact-item
         :contactImage="contact.contactImage"
         :secondaryText="contact.lastContactDetails.textMessage"
-        :timestamp="Date.now()"
+        :timestamp="getReadableTime(contact.lastContactDetails.timestamp)"
         :contactName="contact.contactName"
         :isActive="true"
         :isSelected="false"
@@ -21,6 +21,7 @@ import { defineComponent, PropType } from "vue";
 import ContactItem from "@/shared/molecules/ContactItem.vue";
 import AppInput from "@/shared/atoms/AppInput.vue";
 import { Contact } from "@/models/interfaces";
+import { getReadableTime } from "@/helpers";
 
 export default defineComponent({
   name: "contacts-list",
@@ -30,6 +31,9 @@ export default defineComponent({
   components: {
     ContactItem,
     AppInput,
+  },
+  methods: {
+    getReadableTime,
   },
 });
 </script>

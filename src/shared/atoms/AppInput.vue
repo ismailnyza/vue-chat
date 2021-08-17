@@ -1,5 +1,5 @@
 <template>
-  <input type="text" name="" id="" />
+  <input type="text" name="" id="" :placeholder="placeholder" />
 </template>
 
 <script lang="ts">
@@ -7,7 +7,9 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "app-input",
-  props: {},
+  props: {
+    placeholder: String,
+  },
 });
 </script>
 

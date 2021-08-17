@@ -2,29 +2,33 @@
   <div class="contact-card">
     <div class="avatar-container">
       <app-avatar
-        :size="'small'"
+        size="small"
         :isActive="isActive"
         :source="contactImage"
         :altText="contactName"
       />
     </div>
-    <div>
+    <div class="name-container">
       <div>
         <app-text
-          :textType="'title'"
+          textType="title"
           :isBold="true"
           :isShaded="false"
           :value="contactName"
+          class="name"
         />
         <app-text
-          :textType="'subtitle'"
+          textType="subtitle"
           :isBold="false"
           :isShaded="false"
           :value="secondaryText"
+          class="secondary-text"
         />
       </div>
+    </div>
+    <div class="time-container">
       <app-text
-        :textType="'tiny-text'"
+        textType="tiny-text"
         :isBold="false"
         :isShaded="false"
         :value="timestamp"
@@ -57,16 +61,27 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .contact-card {
-  display: grid;
-  grid-template-columns: 15% 85%;
-  padding: 5px;
-}
-
-avatar-container {
   display: flex;
-  flex-direction: column;
-  justify-content: middle;
+  flex-direction: row;
   align-items: center;
-  padding: 2em;
+  padding: 0.5em;
+  margin: 0.5em;
+  border-radius: 20px;
+  background: rgb(231, 227, 227);
+
+  .name-container {
+    text-align: left;
+    margin-left: 0.5em;
+    width: 60%;
+    overflow: hidden;
+
+    .name {
+      margin: 0.2em;
+    }
+
+    .secondary-text {
+      margin: 0.2em;
+    }
+  }
 }
 </style>
