@@ -10,7 +10,7 @@
 
 - templates         // componets built with shared components
 
-- pages             // smarts componets that comes from templates with logic
+- views             // smarts componets that comes from templates with logic
 
 - store             // data store to manage global state
 

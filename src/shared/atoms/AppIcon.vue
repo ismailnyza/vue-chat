@@ -1,13 +1,12 @@
 <template>
-  <icon></icon>
+  <h1>icon</h1>
 </template>
 
-<script lang="ts">
+<script lang="js">
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "app-icon",
-  props: {},
+  name: 'app-icon'
 });
 </script>
 

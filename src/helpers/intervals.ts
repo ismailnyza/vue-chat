@@ -1,4 +1,4 @@
-import { Logger } from "@vue-chat/utils";
+import { Logger } from "@/utils";
 
 const logger = new Logger("interval logger");
 

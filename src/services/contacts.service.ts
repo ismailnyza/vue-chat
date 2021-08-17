@@ -1,6 +1,6 @@
-import { createInterval } from "@vue-chat/helpers";
-import { Contact } from "@vue-chat/models/interfaces";
-import { Logger } from "@vue-chat/utils";
+import { createInterval } from "@/helpers";
+import { Contact } from "@/models/interfaces";
+import { Logger } from "@/utils";
 import { BehaviorSubject, Observable, of } from "rxjs";
 import { switchMap } from "rxjs/operators";
 import { v4 as uuid } from "uuid";

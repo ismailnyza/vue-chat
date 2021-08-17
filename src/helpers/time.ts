@@ -1,4 +1,4 @@
-import { Logger } from "@vue-chat/utils";
+import { Logger } from "@/utils";
 import moment from "moment";
 
 const logger = new Logger("time helper");
