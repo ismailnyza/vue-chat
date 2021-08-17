@@ -50,7 +50,7 @@ export default class SideMenu extends Vue {
     },
     {
       iconName: "videocam",
-      route: "/video",
+      route: "/",
     },
   ];
 }

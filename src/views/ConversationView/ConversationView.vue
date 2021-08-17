@@ -90,7 +90,7 @@ export default class ConversationView extends Vue {
   grid-template-columns: 25% 50% 25%;
 
   .conversation {
-    height: 100vh;
+    height: 75vh;
   }
 }
 

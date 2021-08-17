@@ -5,7 +5,7 @@
       :key="message.messageId"
       :contactImage="message.sender.imageURL"
       :message="message.textMessage"
-      :isActive="message.sender.status"
+      :isActive="message.sender.isActive"
       :timestamp="getReadableTime(message.timestamp)"
       :isCurrentUser="getRandomCurrentUser()"
     />
@@ -43,5 +43,6 @@ export default defineComponent({
   padding: 0 0 50px 0;
   margin-top: 60px;
   margin-bottom: 10px;
+  overflow: hidden;
 }
 </style>

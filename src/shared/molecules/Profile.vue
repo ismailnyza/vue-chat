@@ -27,7 +27,7 @@ export default defineComponent({
   props: {
     userName: String,
     profileImage: String,
-    currentUserStatus: Array as PropType<string[]>,
+    currentUserStatus: String,
   },
   components: {
     AppAvatar,
