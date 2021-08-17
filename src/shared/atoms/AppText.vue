@@ -1,5 +1,7 @@
 <template>
-  <p :style="cssProps">{{ value }}</p>
+  <p :style="cssProps">
+    {{ value || !!value }}
+  </p>
 </template>
 
 <script lang="ts">

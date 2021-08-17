@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import SideMenu from "@/views/SideMenu.vue";
+import SideMenu from "@/views/SideMenu/SideMenu.vue";
 
 export default defineComponent({
   components: {
@@ -52,6 +52,6 @@ export default defineComponent({
   height: 100%;
   border-radius: 10px;
   border-left: 1px solid;
-  border-color: rgb(87, 87, 87);
+  border-color: rgba(87, 87, 87, 0.378);
 }
 </style>

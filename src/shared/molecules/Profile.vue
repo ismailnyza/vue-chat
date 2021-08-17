@@ -38,7 +38,10 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .profile-container {
-  display: grid;
-  grid-row-gap: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
 }
 </style>

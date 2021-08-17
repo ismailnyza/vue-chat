@@ -1,10 +1,17 @@
 <template>
   <div class="container">
     <div>
+      <app-text
+        textType="title"
+        :isBold="true"
+        :isShaded="false"
+        value="Chat"
+      />
       <div class="profile" :v-if="user">
         <profile
           :currentUserStatus="user.status"
           :profileImage="user.imageURL"
+          :userName="user.name"
         />
       </div>
       <div class="conversation-list">
@@ -32,6 +39,7 @@ import Profile from "@/shared/molecules/Profile.vue";
 import ContactsList from "@/shared/organisms/ContactsList.vue";
 import MessagesThread from "@/shared/organisms/MessageThread.vue";
 import AppButton from "@/shared/atoms/AppButton.vue";
+import AppText from "@/shared/atoms/AppText.vue";
 
 @Options({
   components: {
@@ -39,6 +47,7 @@ import AppButton from "@/shared/atoms/AppButton.vue";
     ContactsList,
     MessagesThread,
     AppButton,
+    AppText,
   },
 })
 export default class ConversationView extends Vue {

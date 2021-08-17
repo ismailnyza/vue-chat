@@ -1,31 +1,35 @@
 <template>
   <div class="contact-card">
-    <app-avatar
-      :size="'small'"
-      :isActive="isActive"
-      :source="contactImage"
-      :altText="contactName"
-    />
-    <div>
-      <app-text
-        :textType="'title'"
-        :isBold="true"
-        :isShaded="false"
-        :value="contactName"
-      />
-      <app-text
-        :textType="'subtitle'"
-        :isBold="false"
-        :isShaded="true"
-        :value="secondaryText"
+    <div class="avatar-container">
+      <app-avatar
+        :size="'small'"
+        :isActive="isActive"
+        :source="contactImage"
+        :altText="contactName"
       />
     </div>
-    <app-text
-      :textType="'tiny-text'"
-      :isBold="false"
-      :isShaded="true"
-      :value="timestamp"
-    />
+    <div>
+      <div>
+        <app-text
+          :textType="'title'"
+          :isBold="true"
+          :isShaded="false"
+          :value="contactName"
+        />
+        <app-text
+          :textType="'subtitle'"
+          :isBold="false"
+          :isShaded="false"
+          :value="secondaryText"
+        />
+      </div>
+      <app-text
+        :textType="'tiny-text'"
+        :isBold="false"
+        :isShaded="false"
+        :value="timestamp"
+      />
+    </div>
   </div>
 </template>
 
@@ -51,4 +55,18 @@ export default defineComponent({
 });
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.contact-card {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 5px;
+}
+
+avatar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+</style>

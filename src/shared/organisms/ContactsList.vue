@@ -6,7 +6,7 @@
     <div v-for="contact in contacts" :key="contact.contactId">
       <contact-item
         :contactImage="contact.contactImage"
-        :secondaryText="'last sent message...'"
+        :secondaryText="contact.lastContactDetails.textMessage"
         :timestamp="Date.now()"
         :contactName="contact.contactName"
         :isActive="true"
