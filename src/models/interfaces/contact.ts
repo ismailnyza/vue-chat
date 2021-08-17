@@ -4,4 +4,5 @@ export interface Contact {
   contactId: string;
   contactName: string;
   lastContactDetails: Message | null;
+  contactImage: string;
 }

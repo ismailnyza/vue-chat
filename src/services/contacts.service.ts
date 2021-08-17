@@ -1,5 +1,6 @@
 import { createInterval } from "@/helpers";
-import { Contact } from "@/models/interfaces";
+import { UserStatus } from "@/models/constants";
+import { Contact, Message, User } from "@/models/interfaces";
 import { Logger } from "@/utils";
 import { BehaviorSubject, Observable, of } from "rxjs";
 import { switchMap } from "rxjs/operators";
@@ -11,21 +12,43 @@ export class ContactsService {
   private contactsSubject: BehaviorSubject<Contact[]>;
 
   constructor() {
+    const tempUser: User = {
+      userId: uuid(),
+      name: "John Doe",
+      imageURL: "https://www.w3schools.com/howto/img_avatar.png",
+      status: UserStatus.ACTIVE,
+    };
+
+    const lastMessage: Message = {
+      messageId: uuid(),
+      reciever: tempUser,
+      sender: tempUser,
+      isTextMessage: true,
+      isFileMessage: false,
+      isImageMessage: false,
+      files: null,
+      textMessage: "Hello people....",
+      timestamp: Date.now(),
+    };
+
     const contacts: Contact[] = [
       {
         contactId: uuid(),
         contactName: "Dharana Dinindu",
-        lastContactDetails: null,
+        lastContactDetails: lastMessage,
+        contactImage: "https://www.w3schools.com/w3images/avatar6.png",
       },
       {
         contactId: uuid(),
         contactName: "Ismail Nizer",
-        lastContactDetails: null,
+        lastContactDetails: lastMessage,
+        contactImage: "https://www.w3schools.com/w3images/avatar6.png",
       },
       {
         contactId: uuid(),
         contactName: "Ammar Raneez",
-        lastContactDetails: null,
+        lastContactDetails: lastMessage,
+        contactImage: "https://www.w3schools.com/w3images/avatar6.png",
       },
     ];
     this.contactsSubject = new BehaviorSubject<Contact[]>(contacts);

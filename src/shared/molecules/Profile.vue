@@ -22,7 +22,7 @@ import AppText from "@/shared/atoms/AppText.vue";
 import AppDropDown from "@/shared/atoms/AppDropDown.vue";
 
 export default defineComponent({
-  name: "profile-view",
+  name: "profile",
   props: {
     userName: String,
     profileImage: String,

@@ -26,12 +26,10 @@
   left: 0;
   background-color: rgb(255, 255, 255);
   overflow-x: hidden;
-  padding-top: 16px;
 
   a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 20px;
     color: #000000;
     display: block;
   }
@@ -44,7 +42,7 @@
 .main {
   margin-left: 160px;
   padding: 0px 10px;
-  background: #2c3e50;
-  height: 100%;
+  background: #eeeff0;
+  height: 90vh;
 }
 </style>

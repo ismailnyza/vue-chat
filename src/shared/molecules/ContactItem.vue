@@ -35,7 +35,7 @@ import AppAvatar from "@/shared/atoms/AppAvatar.vue";
 import AppText from "@/shared/atoms/AppText.vue";
 
 export default defineComponent({
-  name: "contact",
+  name: "contact-item",
   props: {
     contactName: String,
     secondaryText: String,
