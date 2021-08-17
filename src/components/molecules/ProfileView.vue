@@ -1,0 +1,40 @@
+<template>
+  <app-avatar :size="'regular'" :isActive="true" :source="profileImage" />
+  <app-text
+    :textType="'header'"
+    :isBold="true"
+    :isShaded="false"
+    :value="userName"
+  />
+  <app-drop-down
+    :options="['Active', 'Offline', 'Busy']"
+    :selectedOption="'Active'"
+    :name="'User Status'"
+  />
+  <app-input></app-input>
+</template>
+
+<script lang="ts">
+import { defineComponent, PropType } from "vue";
+import AppAvatar from "./../atoms/AppAvatar.vue";
+import AppText from "./../atoms/AppText.vue";
+import AppDropDown from "./../atoms/AppDropDown.vue";
+import AppInput from "./../atoms/AppInput.vue";
+
+export default defineComponent({
+  name: "profile-view",
+  props: {
+    userName: String,
+    profileImage: String,
+    currentUserStatus: Array as PropType<string[]>,
+  },
+  components: {
+    AppAvatar,
+    AppText,
+    AppDropDown,
+    AppInput,
+  },
+});
+</script>
+
+<style scoped lang="scss"></style>
