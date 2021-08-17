@@ -11,8 +11,11 @@
         <contacts-list :contacts="contactsList" />
       </div>
     </div>
-    <div class="conversation">
+    <div class="conversation-container">
       <h1>Conversation</h1>
+      <app-button>Messages</app-button>
+      <app-button>Participants</app-button>
+      <messages-thread :messages="messagesList" class="conversation" />
     </div>
     <div class="converasion-details"></div>
   </div>
@@ -23,20 +26,25 @@ import { Options, Vue } from "vue-class-component";
 import { Subscription } from "rxjs";
 
 import { API } from "@/services/api.services";
-import { Contact, User } from "@/models/interfaces";
+import { Contact, Message, User } from "@/models/interfaces";
 
 import Profile from "@/shared/molecules/Profile.vue";
 import ContactsList from "@/shared/organisms/ContactsList.vue";
+import MessagesThread from "@/shared/organisms/MessageThread.vue";
+import AppButton from "@/shared/atoms/AppButton.vue";
 
 @Options({
   components: {
     Profile,
     ContactsList,
+    MessagesThread,
+    AppButton,
   },
 })
 export default class ConversationView extends Vue {
   user: User | null = null;
   contactsList: Contact[] = [];
+  messagesList: Message[] = [];
   subscriptions: Subscription[] = [];
 
   beforeCreate(): void {
@@ -46,7 +54,10 @@ export default class ConversationView extends Vue {
         .subscribe((user) => (this.user = user)),
       API()
         .contactsService.getContactsList()
-        .subscribe((contactsList) => (this.contactsList = contactsList))
+        .subscribe((contactsList) => (this.contactsList = contactsList)),
+      API()
+        .messagesService.getMessagesList()
+        .subscribe((messages) => (this.messagesList = messages))
     );
   }
 
@@ -58,10 +69,14 @@ export default class ConversationView extends Vue {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .container {
   display: grid;
   grid-template-columns: 25% 50% 25%;
   padding: 10px;
+
+  .conversation {
+    height: 100vh;
+  }
 }
 </style>
