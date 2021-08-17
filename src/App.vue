@@ -54,4 +54,7 @@ export default defineComponent({
   border-left: 1px solid;
   border-color: rgba(87, 87, 87, 0.378);
 }
+body {
+  padding: 1%;
+}
 </style>
