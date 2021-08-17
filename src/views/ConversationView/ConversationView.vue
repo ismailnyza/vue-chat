@@ -73,10 +73,15 @@ export default class ConversationView extends Vue {
 .container {
   display: grid;
   grid-template-columns: 25% 50% 25%;
-  padding: 10px;
 
   .conversation {
     height: 100vh;
   }
+}
+
+.conversation-container {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  margin: 5px;
 }
 </style>

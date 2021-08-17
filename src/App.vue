@@ -1,12 +1,20 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link>
-    <!-- TODO: add icons -->
-    <router-link to="/chat">Chat</router-link>
-    <router-link to="/about">About</router-link>
+    <side-menu />
   </div>
   <router-view class="main" />
 </template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+import SideMenu from "@/views/SideMenu.vue";
+
+export default defineComponent({
+  components: {
+    SideMenu,
+  },
+});
+</script>
 
 <style lang="scss">
 #app {
@@ -41,8 +49,10 @@
 
 .main {
   margin-left: 160px;
-  padding: 0px 10px;
-  background: #eeeff0;
-  height: 90vh;
+  padding: 0px 0px;
+  height: 100%;
+  border-radius: 10px;
+  border-left: 1px solid;
+  border-color: rgb(87, 87, 87);
 }
 </style>

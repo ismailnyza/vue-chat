@@ -1,13 +1,23 @@
 <template>
-  <h1>icon</h1>
+  <img :src="`https://unpkg.com/ionicons@5.5.2/dist/svg/${name}.svg`" />
 </template>
 
 <script lang="js">
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'app-icon'
+  props: {
+    name: {
+      type: String,
+      required: true,
+    }
+  }
 });
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+img {
+  height: 25px;
+  filter: opacity(30%);
+}
+</style>
