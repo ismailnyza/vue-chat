@@ -65,7 +65,7 @@ export default defineComponent({
 avatar-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: middle;
   align-items: center;
   padding: 2em;
 }

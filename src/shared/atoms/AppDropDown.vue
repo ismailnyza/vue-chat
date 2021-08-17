@@ -1,5 +1,11 @@
 <template>
-  <select v-bind:name="name" v-bind:id="id">
+  <select
+    v-bind:name="name"
+    v-bind:id="id"
+    :value="selectedOption"
+    @change="onChangeValue"
+  >
+    <!-- add colors according to the status -->
     <option v-for="option in options" :key="option" v-bind:value="option">
       {{ option }}
     </option>
@@ -7,7 +13,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from "vue";
+import { defineComponent, PropType, ref } from "vue";
 
 export default defineComponent({
   name: "app-progress",
@@ -16,6 +22,15 @@ export default defineComponent({
     options: Array as PropType<string[]>,
     name: String,
     id: String,
+  },
+  setup(props, context) {
+    const currentValue = ref<string>();
+
+    const onChangeValue = (event: { target: { value: string } }) => {
+      context.emit("onChangeValue", event.target.value);
+    };
+
+    return { currentValue, onChangeValue };
   },
 });
 </script>

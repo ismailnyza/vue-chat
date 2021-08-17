@@ -11,6 +11,7 @@
       :options="['Active', 'Offline', 'Busy']"
       :selectedOption="'Active'"
       :name="'User Status'"
+      @on-change-value="onProfileStatusChange"
     />
   </div>
 </template>
@@ -32,6 +33,13 @@ export default defineComponent({
     AppAvatar,
     AppText,
     AppDropDown,
+  },
+  setup(props, context) {
+    const onProfileStatusChange = (value: string) => {
+      context.emit("onProfileStatusChange", value);
+    };
+
+    return { onProfileStatusChange };
   },
 });
 </script>

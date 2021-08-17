@@ -12,6 +12,7 @@
           :currentUserStatus="user.status"
           :profileImage="user.imageURL"
           :userName="user.name"
+          @on-profile-status-change="setProfileStatus"
         />
       </div>
       <div class="conversation-list">
@@ -40,6 +41,7 @@ import ContactsList from "@/shared/organisms/ContactsList.vue";
 import MessagesThread from "@/shared/organisms/MessageThread.vue";
 import AppButton from "@/shared/atoms/AppButton.vue";
 import AppText from "@/shared/atoms/AppText.vue";
+import { UserStatus } from "@/models/constants";
 
 @Options({
   components: {
@@ -68,6 +70,10 @@ export default class ConversationView extends Vue {
         .messagesService.getMessagesList()
         .subscribe((messages) => (this.messagesList = messages))
     );
+  }
+
+  setProfileStatus(newStatus: string): void {
+    API().userService.updateUserStatus(newStatus as UserStatus);
   }
 
   beforeUnmount(): void {
